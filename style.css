@@ -99,7 +99,8 @@ body {
     border: rgb(0, 0, 0) 10px none;
 }
 .logo{
-    border-color: cornflowerblue;
-    border-style: dotted;
-    width: 200%;
-}
+        border-color: transparent;
+        border-style: dotted;
+        width: 2%;
+        margin-left: 50%;
+    }
