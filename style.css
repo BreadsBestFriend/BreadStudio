@@ -14,8 +14,8 @@ body {
 #game-board {
     border-radius: 160px;
     display: grid;
-    grid-template-columns: repeat(20, 20px);
-    grid-template-rows: repeat(20, 20px);
+    grid-template-columns: repeat(20, 40px);
+    grid-template-rows: repeat(20, 40px);
   
     margin: 5px;
 }
