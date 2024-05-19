@@ -156,7 +156,6 @@ function handleKeyPress(event) {
                 
     }
     }
-    const head = {...snake[0] }
 
 }
 
