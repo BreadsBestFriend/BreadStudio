@@ -1,4 +1,6 @@
-
+.game (
+    align-items: center
+}
 body {
     display: flex;
     align-items: center;
