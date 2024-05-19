@@ -14,8 +14,8 @@ body {
 #game-board {
     border-radius: 160px;
     display: grid;
-    grid-template-columns: repeat(20, 40px);
-    grid-template-rows: repeat(20, 40px);
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
   
     margin: 5px;
 }
@@ -99,7 +99,7 @@ body {
     border: rgb(0, 0, 0) 10px none;
 }
 .logo{
-    border-color: cornflowerblue;
-    border-style: dotted;
-    width: 200%;
+    border-color: transparent;
+    border-style: none;
+    width: 5%;
 }
