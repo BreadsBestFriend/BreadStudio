@@ -25,6 +25,7 @@ body {
     border-radius: 30px;
     box-shadow: inset 0 0 0 10px rgb(255, 255, 255);
     align-items: center;
+    width: 0%;
     
 }
 
@@ -32,12 +33,13 @@ body {
     border: rgb(90, 79, 71)  solid  8px;
     border-radius: 26px;
     box-shadow: inset 0 0 0 10px  rgb(90, 79, 71)
+    width: 0%;
 }
 .game-border-3 {
     border: rgb(91, 116, 84)  solid  30px;
     border-radius: 20px;
     box-shadow: inset 0 0 0 5px rgb(91, 116, 84);
-    width: min-content;
+    width: 0%;
 }
 
 #instruction-text {
