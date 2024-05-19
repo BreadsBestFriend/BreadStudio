@@ -10,7 +10,7 @@ const highScoreText = document.getElementById("highScore")
 console.log(board)
 
 // Define Game Variables
-const gridSize = 20
+const gridSize = 40
 let snake = [{x: 10, y:10}]
 let food = generateFood()
 let direction = "right"
