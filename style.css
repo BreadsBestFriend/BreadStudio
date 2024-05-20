@@ -43,30 +43,14 @@ body {
 }
 
 #instruction-text {
-    position: absolute;
-    top: 45%;
     color: rgb(255, 255, 255);
-    width: 300px;
+    font-size: 100px;
     text-align: center;
     text-transform: capitalize;
     padding: 30px;
     margin: 0;
     font-family: "Poiret One", sans-serif;
 }
-
-#logo {
-    position: absolute;
-    top: 35%;
-    color: rgb(255, 255, 255);
-    width: 300px;
-    text-align: center;
-    text-transform: capitalize;
-    padding: 30px;
-    margin: 0;
-    font-family: "Major Mono Display", monospace;
-    font-size: 50px;
-}
-
 
 .scores {
     display: flex;
