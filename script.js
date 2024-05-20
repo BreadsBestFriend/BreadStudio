@@ -125,7 +125,7 @@ function startGame() {
 // Keypress evengt Listener
 function handleKeyPress(event) {
     if(
-        (!gameStarted && event.code === 'space') ||r
+        (!gameStarted && event.code === 'space') ||
         (!gameStarted && event.key === ' ')
       )  {
         startGame()
