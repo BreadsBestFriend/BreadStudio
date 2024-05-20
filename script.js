@@ -114,7 +114,7 @@ function moveSnake() {
 function startGame() {
     gameStarted = true // Game running
     instructionText.style.display = 'none'
-    logo.style.display = 'none'
+   
     gameInterval = setInterval(() => {
        moveSnake()
        checkCollision()
@@ -194,7 +194,7 @@ function stopGame() {
     clearInterval(gameInterval)
     gameStarted = false
     instructionText.style.display = 'block'
-    logo.style.display = 'block'
+    
 }
 
  function updateHighScore() {
