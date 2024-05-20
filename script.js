@@ -4,7 +4,6 @@
 // Define Html elements
 const board = document.getElementById('game-board')
 const instructionText = document.getElementById('instruction-text')
-const logo = document.getElementById('logo')
 const score = document.getElementById("score")
 const highScoreText = document.getElementById("highScore")
 console.log(board)
@@ -169,6 +168,8 @@ function checkCollision() {
     if(head.x < 1 || head.x > gridSize || head.y < 1 || head.y > gridSize) {
         resetGame()
     }
+
+    
 }
 
 function resetGame() {
