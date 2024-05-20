@@ -45,7 +45,6 @@ body {
 #instruction-text {
     color: rgb(255, 255, 255);
     font-size: 10px;
-    text-align: center;
     text-transform: capitalize;
     padding: 30px;
     margin: 0;
