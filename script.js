@@ -169,12 +169,6 @@ function checkCollision() {
     if(head.x < 1 || head.x > gridSize || head.y < 1 || head.y > gridSize) {
         resetGame()
     }
-
-    for (let i = 1; i < snake.length; i++) {
-        if (head.x === snake[i].x && head.y === snake[i].y ) {
-            resetGame()
-        }
-    }
 }
 
 function resetGame() {
