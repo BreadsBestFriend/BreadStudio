@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=10.0" />
+    <title>Bread Studios</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Borel&family=Pixelify+Sans:wght@400;700&family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body,
+      html {
+        background-color: rgb(15, 15, 15);
+      }
+
+      hr {
+        height: 1px;
+        border: none;
+        background-color: rgb(89, 73, 69);
+      }
+
+      .title {
+        font-size: 200%;
+        color: rgb(244, 244, 244);
+        font-family: "Poiret One", sans-serif;
+        font-weight: 200%;
+        letter-spacing: 4px;
+      }
+
+      a {
+        font-size: 100%;
+        color: rgb(255, 255, 255);
+        font-family: "Poiret One", sans-serif;
+        letter-spacing: 4px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: rgb(89, 73, 69);
+        cursor: pointer;
+      }
+
+      .information {
+        margin: auto;
+      }
+
+      #headings {
+        display: flex; /* Enable flexbox */
+        flex-direction: row; /* Arrange items in a row */
+        align-items: center; /* Align items vertically */
+        gap: 20px;
+      }
+
+      .subheading {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 100px;
+        margin-left: 5%;
+        margin-right: -5%;
+      }
+
+      #homeHeading,
+      #gameHeading,
+      #projectHeading {
+        font-size: 100%;
+        color: rgb(255, 255, 255);
+        font-family: "Poiret One", sans-serif;
+        letter-spacing: 4px;
+        background-color: transparent;
+        border: none;
+      }
+
+      #homeHeading:hover,
+      #gameHeading:hover,
+      #projectHeading:hover {
+        color: rgb(89, 73, 69);
+        cursor: pointer;
+      }
+
+      .logo {
+        width: 50px;
+        float: left;
+        margin-top: -0.45%;
+      }
+
+      .game {
+        width: 200px;
+        height: 200px; 
+        display: block; 
+     
+      }
+      .game1{
+        margin-left: 2%;
+        letter-spacing: 61%;   
+      }
+      .game2{
+        margin-left: 2%;
+        letter-spacing: 105%;   
+      }
+
+      .game3{
+        margin-left: 2%;
+        letter-spacing: 15%;   
+      }
+
+      .game4{
+        margin-left: 2%;
+        letter-spacing: 170%;   
+      }
+
+      .games {
+        margin-left:  2%;
+        margin-top:3%;
+        display: flex;
+        direction: row;
+        gap: 50px ;
+        
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <section class="information">
+      <div id="headings">
+        <img src="breadLogo.png" class="logo" />
+
+        <h1 class="title">BREAD STUDIOS</h1>
+
+        <div class="subheading">
+          <a href="index.html" id="homeHeading">HOME</a>
+          <a id="gameHeading">GAMES</a>
+          <a href="projects.html" id="projectHeading">PROJECTS</a>
+        </div>
+
+    </section>
+    
+    <hr />
+
+    <section class="games">
+        <a href="snake.html">
+            <div>
+                <img src="SnakeLogo.png" class="game">
+                <p class="game1">SNAKE GAME</p> 
+            </div>
+        </a>
+
+        <a href="https://play.unity.com/en/games/6b891a48-d814-4e69-86df-2eacea756039/blueprint">
+            <div>
+                <img src="blueprintLogo.png" class="game">
+                <p class="game2">BLUEPRINT</p> 
+            </div>
+        </a>
+
+        <a href="https://play.unity.com/en/games/e9ee5ff2-ab9e-4957-9495-9a011621c0f4/the-reaction-game">
+            <div>
+                <img src="reactiongameLogo.png" class="game">
+                <p class="game3">THE REACTION GAME</p> 
+            </div>
+        </a>
+
+        <a href="https://breadstudioss.itch.io/phobic">
+            <div>
+                <img src="phobicLogo.png" class="game">
+                <p class="game4">PHOBIC</p> 
+            </div>
+        </a>
+    </section>
+  </body>
+</html>
