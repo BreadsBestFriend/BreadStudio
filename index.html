@@ -1,109 +1,110 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-           	<meta charset="UTF-8"> -->
-	       	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-            
-            <title>Bread Studios</title>
-        
-            <link href="https://fonts.googleapis.com/css2?family=Anton&family=Borel&family=Pixelify+Sans:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
-           
-            <style>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-                body, html {
-                    background-color: black;
-                }
+    <meta name="viewport" content="width=device-width, initial-scale=10.0" />
+    <title>Bread Studios</title>
 
-                hr{
-                    height: 1px;
-                    border: none;
-                    background-color: rgb(89, 73, 69);     
-                }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Borel&family=Pixelify+Sans:wght@400;700&family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
 
-                .heading {
-                    margin: auto;
-                }
+    <style>
+      body,
+      html {
+        background-color: rgb(15, 15, 15);
+      }
 
-                .logo {
-                    width: 50px;
-                    float: left;
-                    border-color: transparent;
-                    border-style: dotted;
-                    border-right-width: 15px;
-                }
-    
-                
-                .title {
-                    font-size: 200%;
-                    color: rgb(89, 73, 69);
-                    font-family: 'Poiret One', sans-serif;
-                    letter-spacing: 4px;
-       
-                }
+      hr {
+        height: 1px;
+        border: none;
+        background-color: rgb(89, 73, 69);
+      }
 
-                a {
-                    font-size: 100%;
-                    color: rgb(89, 73, 69);
-                    font-family: 'Poiret One', sans-serif;
-                    letter-spacing: 4px;
-                    
-                }
+      .title {
+        font-size: 200%;
+        color: rgb(244, 244, 244);
+        font-family: "Poiret One", sans-serif;
+        font-weight: 200%;
+        letter-spacing: 4px;
+      }
 
-              .projects {
-                    display: flex;
-                    align-items: center;
-                    justify-content:space-around;
-                }
+      a {
+        font-size: 100%;
+        color: rgb(89, 73, 69);
+        font-family: "Poiret One", sans-serif;
+        letter-spacing: 4px;
+        text-decoration: none;
+      }
 
-                .codeslation {
-                    width: 200px;
-                    /* margin-top: 2%; */
-                }
+      .projects {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
 
-                .drawmaterial {
-                    width: 200px;
-                    /* margin-top: 2%; */
-                }
+      .information {
+        margin: auto;
+      }
 
-                .snakegame {
-                    width: 200px;
-                    /* margin-top: 2%; */
-                }
-            </style>
-            
-        </head>
-        <body>   
-            <section class="heading">
-                
-                <img src="breadLogo.png" class="logo"/>
-                
-                <h1 class="title">BREAD STUDIOS</h1>
-                <hr class="hr">
+      #headings {
+        display: flex; /* Enable flexbox */
+        flex-direction: row; /* Arrange items in a row */
+        align-items: center; /* Align items vertically */
+        gap: 20px;
+      }
 
-		<div>
-			<div class="projects">
-                    <div>
-                        <a href="codeslation.html">
-                            <div><img src="CodelastionLogo.png" class="codeslation"></div>
-                            CODESLATION 
-                        </a>
-                    </div>
-                    <div>
-                        <a href="DrawMaterial.html">
-                            <div><img src="DrawMaterialLogo.png" class="drawmaterial"></div>
-                            DRAW MATERIAL 
-                        </a>
-                    </div>
-                    <div>
-                        <a href="snakeGame.html">
-                            <div><img src="SnakeLogo.png" class="snakegame"></div>
-                            SNAKE GAME 
-                        </a>
-                    </div>
-                                        
-                </div>
-	                
-		</div>
-                
-        </body>
-    </html>
+      .subheading {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 100px;
+        margin-left: 5%;
+        margin-right: -5%;
+      }
+
+      #homeHeading,
+      #gameHeading,
+      #projectHeading {
+        font-size: 100%;
+        color: rgb(255, 255, 255);
+        font-family: "Poiret One", sans-serif;
+        letter-spacing: 4px;
+        background-color: transparent;
+        border: none;
+      }
+
+      #homeHeading:hover,
+      #gameHeading:hover,
+      #projectHeading:hover {
+        color: rgb(89, 73, 69);
+        cursor: pointer;
+      }
+
+      .logo {
+        width: 50px;
+        float: left;
+        margin-top: -0.45%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="information">
+      <div id="headings">
+        <img src="breadLogo.png" class="logo" />
+
+        <h1 class="title">BREAD STUDIOS</h1>
+
+        <div class="subheading">
+          <a id="homeHeading">HOME</a>
+          <a href="games.html" id="gameHeading">GAMES</a>
+          <a href="projects.html" id="projectHeading">PROJECTS</a>
+        </div>
+
+    </section>
+    <hr />
+  </body>
+</html>
