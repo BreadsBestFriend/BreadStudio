@@ -36,16 +36,6 @@
         "x" : "-..-",
         "y" : "-.--",
         "z" : "--..",
-        "1" : ".----",
-        "2" : "..---",
-        "3" : "...--",
-        "4" : "....-",
-        "5" : ".....",
-        "6" : "-....",
-        "7" : "--...",
-        "8" : "---..",
-        "9" : "----.",
-        "0" : "-----"
     }
     
     const ENGLISH_TO_BINARY_DICT = {
@@ -75,16 +65,6 @@
         "x" : "01111000",
         "y" : "01111001",
         "z" : "01111010",
-        "1" : "00110001",
-        "2" : "00110010",
-        "3" : "00110011",
-        "4" : "00110100",
-        "5" : "00110101",
-        "6" : "00110110",
-        "7" : "00110111",
-        "8" : "00111000",
-        "9" : "00111001",
-        "0" : "00110000"
     }        
 
     function englishToMorse() {
@@ -131,49 +111,52 @@
 <style>
     body, html {
         width: 99%; 
-        background-color: rgb(0, 0, 0);    
+        background-color: rgb(255, 255, 255);    
         font-family: 'Pixelify Sans', sans-serif;
         letter-spacing: 7px;
-        color: white;
+        background-color:  #b7e2eb;
     }
 
     label {
         margin: 1%;
+        color: #917962;
+
     }
 
     p {
         margin: 1%;
         margin-left: 8px;
-        color: white;
-        background-color: rgb(17, 17, 17);
+        color: #917962;
+        background-color: rgb(255, 255, 255);
         width: 96%;
-        border-color: white;
-        border-style:dashed;
+
         font-family: 'Pixelify Sans', sans-serif;
         letter-spacing: 7px;
         padding: 12px 20px;
+
+        height: 200px;
     }
     
     textarea{
         margin: 1%;
         margin-left: 8px;
-        color: white;
-        background-color: rgb(17, 17, 17);
+        color: #917962;
+        background-color: rgb(255, 255, 255);
         width: 96%;
-        border-color: white;
-        border-style:dashed;
+
         font-family: 'Pixelify Sans', sans-serif;
         letter-spacing: 7px;
         padding: 12px 20px;
         font-size: large;
+        border-radius: 6px;
     }
 
     button{
-        margin-left:48%;
-        color: white;
-        background-color: rgb(17, 17, 17);
-        border-color: white;
-        border-style:dashed;
+        margin-left:50%;
+        color: #917962;
+        background-color: rgb(255, 255, 255);
+        border-color: #917962;
+        border-style: solid;
         font-family: 'Pixelify Sans', sans-serif;
         letter-spacing: 7px;
         padding: 12px 20px;
@@ -181,15 +164,18 @@
     }
 
     button:hover, textarea:hover, label:hover, p:hover{
-        color: rgb(0, 255, 0);
-        border-color: rgb(0, 255, 0);
+        color: #917962;
+        border-color: #917962;
     }
 
     .logo{
         border-color: transparent;
         border-style: dotted;
-        width: 2%;
+        width: 5%;
         margin-left: 50%;
+        align-items: center;
+        display: flex;
+        justify-items: center;
     }
 
    
@@ -202,10 +188,10 @@
     <section>
         <label for="eng">Normal Text:</label>
         <textarea id="inputText" rows="4" cols="50" placeholder="Enter text in English"></textarea>
-        <div class="buttonSection">
-            <a href="projects.html"><img src="breadLogo.png" class="logo"/></a>
+        <span class="buttonSection">
+            <a href="projects.html"><img src="Bread.png" class="logo"/></a>
             <button onclick="englishToMorse(), englishToBinary()">Convert</button>
-        </div>
+        </span>
         
         <div>
             <label for="mCode">Morse Code:</label>
@@ -218,12 +204,7 @@
 
         <p id="outputBinary"></p>
     </section>
-    
 
-    <hr>
-
-    
-    
       
 </body>
 </html>
