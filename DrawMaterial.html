@@ -1,151 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drawing Program: BREAD STUDIOS</title>
-<style>
-  body{
-    background-color: rgb(0, 0, 0);
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing Program: BREAD STUDIOS</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@500&display=swap");
+      body {
+        background-color: #b7e2eb;
+        color: transparent;
+      }
 
-  canvas{
-    border: 1px solid #ffffff;
-  }
+      canvas {
+        margin-top: 1%;
+        border: 1px solid #917962;
+        border-radius: 6px;
+        border-width: px;
+        background-color: white;
+      }
 
-  label{
-    color: #ffffff;
-    font-size: larger;
-    font-family: 'Courier New', Courier, monospace;
-  }
+      label {
+        color: #917962;
+        font-size: larger;
+        font-family: "Sour Gummy", sans-serif;
+      }
 
-  select{
-    border-style:none;
-    background-color: rgba(0, 0, 0, 0);
-    color: #ffffff;
-    font-size: larger;
-    font-family: 'Courier New', Courier, monospace;
-  }
+      select {
+        border-style: none;
+        background-color: #b7e2eb;
+        color: #917962;
+        font-size: larger;
+        font-family: "Sour Gummy", sans-serif;
+      }
 
-  div{
-    height:1140px;
-  }
+      div {
+        height: 1140px;
+      }
 
-  .logo{
+
+      .logo {
         border-color: transparent;
         border-style: dotted;
-        width: 2%;
-    }
-  
-  button{
-    border-style:none;
-    background-color: black;
-    color: #ffffff;
-    font-size: larger;
-    font-family: 'Courier New', Courier, monospace;
-  }
-
-  button:hover{
-    background-color: rgb(33, 33, 33);
-  }
-</style>
-</head>
-<body>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-  <div>
-    <a href="projects.html"><img src="breadLogo.png" class="logo"/></a>
-    <button id="draw" onclick="drawFunctions()">DRAW</button>
-    .
-    <label>SIZE:</label>
-    <select name="sizes" id="drawsize">
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="15">15</option>
-      <option value="20">20</option>
-      <option value="25">25</option>
-      <option value="30">30</option>
-      <option value="35">35</option>
-      <option value="40">40</option>
-      <option value="45">45</option>
-      <option value="50">50</option>
-      <option value="55">55</option>
-      <option value="60">60</option>
-      <option value="65">65</option>
-      <option value="70">70</option>
-      <option value="75">75</option>
-      <option value="80">80</option>
-      <option value="85">85</option>
-      <option value="90">90</option>
-      <option value="95">95</option>
-      <option value="100">100</option>
-    
-    </select>
-    .
-    <button onmousedown="clearCanvas()">DELETE ALL</button>
-    .
-    .
-    .
-    <label>COLORS + ERASE:</label>
-    <select name="colors" id="colors">
-      <option value="Red">Red</option>
-      <option value="Orange">Orange</option>
-      <option value="Yellow">Yellow</option>
-      <option value="Green">Green</option>
-      <option value="Blue">Blue</option>
-      <option value="Purple">Purple</option>
-      <option value="White">White</option>
-      <option value="Black">Erase (BLACK) </option>
-    </select>
-  
-    <canvas id="DrawCanvas"></canvas>
-  </div>
- 
-  <script>
-
-    const canvas = document.getElementById("DrawCanvas")
-    const dropdowncolors = document.getElementById("colors")
-    const dropdownsizes = document.getElementById("drawsize")
-    fitToContainer(canvas);
-    const ctx = canvas.getContext("2d")
-    let drawSize = 60
-    let isDrawing = false
-
-    function fitToContainer(canvas ){
-      // Make it visually fill the positioned parent
-      canvas.style.width ='100%';
-      canvas.style.height='100%';
-      // ...then set the internal size to match
-      canvas.width  = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    }
-    
-    function clearCanvas() {
-      ctx.clearRect(0,0, canvas.width, canvas.height)
-    }
-    
-    function drawFunctions() {
-      canvas.addEventListener('mousedown', startDraw);
-      canvas.addEventListener('mousemove', draw);
-      canvas.addEventListener('mouseup', stopDraw);
-
-      function startDraw(event) {
-        isDrawing = true;
-        draw(event)
+        width: 3%;
       }
-      function draw(event) {
-        if (!isDrawing) return;
+
+      button {
+        border-style: none;
+        background-color: rgb(255, 255, 255);
+        color: #917962;
+        border-radius: 4px;
+        font-size: larger;
+        font-family: "Sour Gummy", sans-serif;
+      }
+
+      button:hover {
+        background-color: rgb(33, 33, 33);
+      }
+    </style>
+  </head>
+  <body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <div>
+        <a href="projects.html"><img src="Bread.png" class="logo" /></a>
+        <button id="draw" onclick="drawFunctions()">DRAW</button>
+        .......
+        <label>SIZE:</label>
+        .......
+        <select name="sizes" id="drawsize">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="35">35</option>
+          <option value="40">40</option>
+          <option value="45">45</option>
+          <option value="50">50</option>
+          <option value="55">55</option>
+          <option value="60">60</option>
+          <option value="65">65</option>
+          <option value="70">70</option>
+          <option value="75">75</option>
+          <option value="80">80</option>
+          <option value="85">85</option>
+          <option value="90">90</option>
+          <option value="95">95</option>
+          <option value="100">100</option>
+        </select>
+        .......
+        <button onmousedown="clearCanvas()">DELETE ALL</button>
+        .......
+        <label>COLORS + ERASE:</label>
+        .......
+        <select name="colors" id="colors">
+          <option value="Red">Red</option>
+          <option value="Orange">Orange</option>
+          <option value="Yellow">Yellow</option>
+          <option value="Green">Green</option>
+          <option value="Blue">Blue</option>
+          <option value="Purple">Purple</option>
+          <option value="White">White</option>
+          <option value="Black">Erase (BLACK)</option>
+        </select>
+  
+      <canvas id="DrawCanvas"></canvas>
+    </div>
+
+    <script>
+      const canvas = document.getElementById("DrawCanvas");
+      const dropdowncolors = document.getElementById("colors");
+      const dropdownsizes = document.getElementById("drawsize");
+      fitToContainer(canvas);
+      const ctx = canvas.getContext("2d");
+      let drawSize = 60;
+      let isDrawing = false;
+
+      function fitToContainer(canvas) {
+        // Make it visually fill the positioned parent
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        // ...then set the internal size to match
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+
+      function clearCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      function drawFunctions() {
+        canvas.addEventListener("mousedown", startDraw);
+        canvas.addEventListener("mousemove", draw);
+        canvas.addEventListener("mouseup", stopDraw);
+
+        function startDraw(event) {
+          isDrawing = true;
+          draw(event);
+        }
+        function draw(event) {
+          if (!isDrawing) return;
           ctx.fillStyle = dropdowncolors.value;
           ctx.beginPath();
-          ctx.arc(event.offsetX, event.offsetY, dropdownsizes.value, 0, Math.PI * 2);
-          ctx.fill()
-          console.log("Drawing")
-         }
-    
-      function stopDraw() {
-        isDrawing = false
+          ctx.arc(
+            event.offsetX,
+            event.offsetY,
+            dropdownsizes.value,
+            0,
+            Math.PI * 2
+          );
+          ctx.fill();
+          console.log("Drawing");
+        }
+
+        function stopDraw() {
+          isDrawing = false;
+        }
       }
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
