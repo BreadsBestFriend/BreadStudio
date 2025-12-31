@@ -8,7 +8,7 @@ body {
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: #b7e2eb;
 }
 
 #game-board {
@@ -21,35 +21,49 @@ body {
 }
 
 .game-border-1 {
+    width: min-content;
     border: rgb(255, 255, 255) solid 10px;
     border-radius: 30px;
     box-shadow: inset 0 0 0 10px rgb(255, 255, 255);
-    align-items: center;
-    width: min-content;
-    
 }
 
 .game-border-2 {
-    border: rgb(90, 79, 71)  solid  8px;
+    border: rgb(152, 135, 123)  solid  8px;
     border-radius: 26px;
     box-shadow: inset 0 0 0 10px  rgb(90, 79, 71)
-   
 }
 .game-border-3 {
-    border: rgb(91, 116, 84)  solid  30px;
+    
+    border: rgb(171, 206, 162)  solid  30px;
     border-radius: 20px;
     box-shadow: inset 0 0 0 5px rgb(91, 116, 84);
-    
 }
 
 #instruction-text {
+    position: absolute;
+    top: 45%;
     color: rgb(255, 255, 255);
-    font-size: 10px;
+    width: 300px;
+    text-align: center;
     text-transform: capitalize;
     padding: 30px;
     margin: 0;
     font-family: "Poiret One", sans-serif;
 }
+
+#logo {
+    position: absolute;
+    top: 35%;
+    color: rgb(255, 255, 255);
+    width: 300px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 30px;
+    margin: 0;
+    font-family: "Major Mono Display", monospace;
+    font-size: 50px;
+}
+
 
 .scores {
     display: flex;
@@ -61,7 +75,7 @@ body {
 }
 
 #highScore {
-    color: rgb(226, 226, 226);
+    color: rgb(255, 255, 255);
     display: block;
 }
 
@@ -74,20 +88,18 @@ body {
 }
 
 .game-border-3 {
-    background-color: rgb(90, 79, 71)
+    background-color: rgb(155, 138, 126)
 }
 
 .snake {
-    background-color: rgb(0, 0, 0);
-    border: rgb(39, 33, 24) 2px solid;
+    background-color: rgb(99, 238, 97);
+    border: rgb(99, 238, 97) 2px solid;
 }
 
 .food {
-    background-color: rgb(153, 153, 153);
-    border: rgb(0, 0, 0) 10px none;
+    background-color: #a6cdd4;
+    border: rgb(255, 255, 255) 10px none;
 }
 .logo{
-    border-color: transparent;
-    border-style: none;
-    width: 5%;
+    width: 30%;
 }
