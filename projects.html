@@ -12,28 +12,30 @@
     />
 
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@500&display=swap");
+
       body,
       html {
-        background-color: rgb(15, 15, 15);
+        background-color:  #b7e2eb;
       }
 
       hr {
         height: 1px;
         border: none;
-        background-color: rgb(89, 73, 69);
+        background-color: #ffffff;
       }
 
       .title {
-        font-size: 200%;
-        color: rgb(244, 244, 244);
-        font-family: "Poiret One", sans-serif;
+        font-size: 300%;
+        color: #917962;
+        font-family: "Sour Gummy", sans-serif;
         font-weight: 200%;
         letter-spacing: 4px;
       }
 
       a {
         font-size: 100%;
-        color: rgb(255, 255, 255);
+        color: #917962;
         font-family: "Poiret One", sans-serif;
         letter-spacing: 4px;
         text-decoration: none;
@@ -44,9 +46,10 @@
         cursor: pointer;
       }
 
-      .information {
+     .information {
         margin: auto;
       }
+
 
       #headings {
         display: flex; /* Enable flexbox */
@@ -59,17 +62,17 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 100px;
-        margin-left: 5%;
-        margin-right: -5%;
+        gap: 300px;
+        margin-left: 10%;
+
       }
 
       #homeHeading,
       #gameHeading,
       #projectHeading {
-        font-size: 100%;
-        color: rgb(255, 255, 255);
-        font-family: "Poiret One", sans-serif;
+        font-size: 300%;
+        color: #917962;
+        font-family: "Sour Gummy", sans-serif;
         letter-spacing: 4px;
         background-color: transparent;
         border: none;
@@ -78,29 +81,33 @@
       #homeHeading:hover,
       #gameHeading:hover,
       #projectHeading:hover {
-        color: rgb(89, 73, 69);
+        color: #766250;
         cursor: pointer;
       }
 
-      .logo {
-        width: 50px;
+     .logo {
+        width: 10%;
         float: left;
         margin-top: -0.45%;
       }
-
-      .game {
+      .project {
         width: 200px;
         height: 200px; 
         display: block; 
-     
+        border-width: 10%;
+        border-style: solid;
+        border-radius: 5%;
       }
       .project1{
         margin-left: 2%;
         letter-spacing: 61%;   
+        font-family: "Sour Gummy", sans-serif;
       }
       .project2{
         margin-left: 2%;
         letter-spacing: 37%;   
+        font-family: "Sour Gummy", sans-serif;
+        
       }
 
       .projects {
@@ -110,6 +117,8 @@
         direction: row;
         gap: 50px ;
         
+       
+        
       }
 
     </style>
@@ -118,7 +127,7 @@
   <body>
     <section class="information">
       <div id="headings">
-        <img src="breadLogo.png" class="logo" />
+        <img src="Bread.png" class="logo" />
 
         <h1 class="title">BREAD STUDIOS</h1>
 
@@ -135,14 +144,14 @@
     <section class="projects">
         <a href="codeslation.html">
             <div>
-                <img src="codeslationLogo.png" class="game">
+                <img src="codeslationLogo.png" class="project">
                 <p class="project1">CODESLATION</p> 
             </div>
         </a>
 
         <a href="DrawMaterial.html">
             <div>
-                <img src="drawmaterialLogo.png" class="game">
+                <img src="drawmaterialLogo.png" class="project">
                 <p class="project2">DRAW MATERIAL</p> 
             </div>
         </a>
