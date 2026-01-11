@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@500&display=swap");
+
+.sour-gummy-custom {
+  /* Use quotes for names with spaces */
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  /* Axis tag must be in quotes */
+  font-variation-settings: "wdth" 100;
+}
+
+body {
+  background-color: #fec266;
+}
+
+#container {
+  background-color: #fbc778;
+  position: relative; /* Items move relative to this box */
+  overflow: hidden;
+  width: 75%;
+  height: 100vh;
+}
+
+#links_container {
+  background-color: #fec266;
+  width: 25%;
+  height: 100vh;
+}
+
+#box-container {
+  border-color: antiquewhite;
+  border-width: 50%;
+}
+
+#textbox_link {
+  border-radius: 5px;
+  margin-left: 20%;
+  margin-top: 0%;
+  cursor: default;
+  resize: none;
+}
+
+.tabcontainer {
+  background-color: #fec266;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab {
+  margin: 2%;
+  margin-right: 10%;
+  border-color: aliceblue;
+  border-radius: 5%;
+}
+
+.tab button {
+  border-radius: 10%;
+  border-color: #b7e2eb;
+  background-color: #b7e2eb;
+  width: 110%;
+  border-style: solid;
+  height: 160px;
+
+  font-size: 60px;
+  font-family: "Sour Gummy", sans-serif;
+  color: rgb(89, 70, 43);
+}
+
+.tab button:hover {
+  border-radius: 10%;
+  border-color: #b7e2ebce;
+  background-color: #b7e2ebce;
+  width: 110%;
+  border-style: solid;
+  height: 160px;
+}
+.main {
+  display: flex;
+}
+
+.textbox,
+.link, .linkheader {
+  background-color: #b7e2eb;
+  border-radius: 1%;
+  border-color: transparent;
+  width: 10%;
+  height: 60px;
+
+  z-index: 1001;
+
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 50px;
+  color: rgb(89, 70, 43);
+}
+
+.link, .linkheader {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 10%;
+
+  resize: none; /* Prevents manual resizing by the user */
+  overflow: hidden; /* Hides scroll bars */
+  box-sizing: border-box;
+}
+
+.shape {
+  width: 400px;
+  height: 400px;
+  background: #dec0e9;
+  overflow: auto;
+  resize: both;
+  z-index: 1000;
+}
+
+.textbox,
+.shape {
+  position: absolute; /* Vital for dragging */
+  cursor: move;
+  top: 50px; /* Starting position */
+  left: 50px; /* Starting position */
+}
+
+.listItem {  
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  z-index: 1001;
+}
+
+input[type=checkbox] {
+  -ms-transform: scale(3); /* IE */
+  -moz-transform: scale(3); /* FF */
+  -webkit-transform: scale(3); /* Safari and Chrome */
+  -o-transform: scale(3); /* Opera */
+  transform: scale(3);
+  padding: 10px;
+}
+
+.checkbox {
+  accent-color:  #8df0ff;
+}
+
+.text_List {
+  background-color: #b7e2eb;
+  border-radius: 1%;
+  border-color: transparent;
+  width: 10%;
+  height: 60px;
+
+  z-index: 1001;
+
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 50px;
+  color: rgb(89, 70, 43);
+
+}
+.moveable-item {
+  pointer-events: none; /* Allows mouse events to "pass through" to the shape below */
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Tracker</title>
+    <link rel="stylesheet" href="study.css" />
+  </head>
+  <body>
+    <div class="tabcontainer">
+      <div class="tab">
+        <a
+          href="https://breadsbestfriend.github.io/BreadStudio/index.html"
+          target="_blank"
+        >
+          <img src="Bread.png" />
+        </a>
+      </div>
+
+      <div class="tab">
+        <button onclick="onLinkButtonClick()">LINKS</button>
+      </div>
+
+      <div class="tab">
+        <button id="textButton" onclick="onTextButtonClick();">TEXT</button>
+      </div>
+
+      <div class="tab">
+        <button onclick="onListButtonClick()">LISTS</button>
+      </div>
+
+      <div class="tab">
+        <button onclick="onShapesButtonClick();">SHAPES</button>
+      </div>
+    </div>
+
+    <div class="main my-data">
+      <div id="links_container" class="my-data">
+        <textarea
+          class="linkheader"
+          id="textbox_link"
+          placeholder="Input Link And Click 'LINKS'"
+        ></textarea>
+      </div>
+      <div id="container" class="my-data"></div>
+    </div>
+
+    <script>
+      let text_clicks = 0;
+      let shapes_clicks = 0;
+      let link_clicks = 0;
+      let list_click = 0;
+
+      // --- SAVE FUNCTION ---
+      // This saves the actual HTML inside your containers
+      function saveAll() {
+        const container = document.getElementById("container");
+        const linksContainer = document.getElementById("links_container");
+
+        // IMPORTANT: Manually sync 'value' to 'textContent' so innerHTML sees it
+        container.querySelectorAll("textarea").forEach((txt) => {
+          txt.textContent = txt.value;
+        });
+        linksContainer.querySelectorAll("textarea").forEach((txt) => {
+          txt.textContent = txt.value;
+        });
+
+        // Now save the HTML which includes your typed text
+        localStorage.setItem("study_tracker_main", container.innerHTML);
+        localStorage.setItem("study_tracker_links", linksContainer.innerHTML);
+
+        localStorage.setItem(
+          "counts",
+          JSON.stringify({
+            text: text_clicks,
+            shapes: shapes_clicks,
+            links: link_clicks,
+            lists: list_click,
+          })
+        );
+        console.log("Everything saved, including text!");
+      }
+
+      // --- LOAD FUNCTION ---
+      // This restores the elements and re-attaches the drag ability
+      function loadAll() {
+        const savedMain = localStorage.getItem("study_tracker_main");
+        const savedLinks = localStorage.getItem("study_tracker_links");
+        const savedCounts = JSON.parse(localStorage.getItem("counts"));
+
+        if (savedMain)
+          document.getElementById("container").innerHTML = savedMain;
+        if (savedLinks)
+          document.getElementById("links_container").innerHTML = savedLinks;
+
+        // Restore click counters
+        if (savedCounts) {
+          text_clicks = savedCounts.text;
+          shapes_clicks = savedCounts.shapes;
+          link_clicks = savedCounts.links;
+          list_click = savedCounts.lists;
+        }
+      }
+
+      function onTextButtonClick() {
+        text_clicks += 1;
+        const newTextArea = document.createElement("textarea");
+        newTextArea.value = "Text " + text_clicks;
+        newTextArea.className = "textbox my-data";
+        document.getElementById("container").appendChild(newTextArea);
+        makeElementDraggable(newTextArea);
+        saveAll(); // Save after adding
+      }
+
+      function onLinkButtonClick() {
+        const newLink = document.createElement("a");
+        const name = document.createElement("textarea");
+        let link_text = document.getElementById("textbox_link").value;
+        name.value = link_text;
+        name.className = "link my-data";
+        name.readOnly = true;
+        link_clicks += 1;
+        newLink.target = "_blank";
+        newLink.href = "https://" + link_text;
+        newLink.appendChild(name);
+        document.getElementById("links_container").appendChild(newLink);
+        saveAll(); // Save after adding
+      }
+
+      function onShapesButtonClick() {
+        shapes_clicks += 1;
+        const newShape = document.createElement("div");
+        newShape.className = "shape my-data";
+        document.getElementById("container").appendChild(newShape);
+        makeElementDraggable(newShape);
+        saveAll(); // Save after adding
+      }
+
+      function onListButtonClick() {
+        list_click += 1;
+        const newForm = document.createElement("form");
+        newForm.className = "listItem my-data";
+        const newInput = document.createElement("input");
+        newInput.type = "checkbox";
+        newInput.className = "checkbox my-data";
+        const newList = document.createElement("label");
+        const newText = document.createElement("textarea");
+        newText.className = "text_List my-data";
+        newList.appendChild(newText);
+        newForm.appendChild(newInput);
+        newForm.appendChild(newList);
+        document.getElementById("container").appendChild(newForm);
+        makeElementDraggable(newForm);
+        saveAll(); // Save after adding
+      }
+
+      function makeElementDraggable(el) {
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        el.addEventListener("mousedown", (e) => {
+          isDragging = true;
+          offsetX = e.clientX - el.offsetLeft;
+          offsetY = e.clientY - el.offsetTop;
+        });
+
+        document.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+          el.style.left = e.clientX - offsetX + "px";
+          el.style.top = e.clientY - offsetY + "px";
+          el.style.position = "absolute";
+        });
+
+        document.addEventListener("mouseup", () => {
+          if (isDragging) saveAll(); // Save position when let go
+          isDragging = false;
+        });
+      }
+
+      // Handle double-click delete
+      document.addEventListener("dblclick", (event) => {
+        const t = event.target;
+        if (t.classList.contains("textbox") || t.classList.contains("shape")) {
+          t.remove();
+        } else if (t.classList.contains("checkbox") || t.className == "link") {
+          t.parentElement.remove();
+        } else if (t.classList.contains("text_List")) {
+          t.parentElement.parentElement.remove();
+        }
+        saveAll(); // Save after deleting
+      });
+
+      // AUTO-SAVE typing
+      document.addEventListener("input", (e) => {
+        saveAll();
+      });
+
+      document.addEventListener("DOMContentLoaded", loadAll);
+    </script>
+  </body>
+</html>
